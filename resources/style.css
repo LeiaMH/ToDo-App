@@ -161,3 +161,22 @@ ul.todo#completed li .buttons button.complete svg{
     border-radius: 25px;
     border: 1px solid #1ba4ce;
 }
+ul.todo#completed li .buttons button.complete:hover svg{
+    background: #69e9b2;
+    border: 1px solid #69e9b2;
+}
+ul.todo#completed:not(:empty){
+    padding: 60px 0 0 0;
+}
+
+/*--->TODO: This section divider is not working!*/
+ul.todo#completed:not(:empty)::before {
+    content: '';
+    width: 150px;
+    height: 1px;
+    background: black;
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    margin: 0 0 0 5px;
+}
