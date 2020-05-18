@@ -10,6 +10,16 @@ document.getElementById('add').addEventListener('click', function() {
     }
 });
 
+//user presses enter
+//if there is any text inside the item field, add that text to the todo list.
+document.getElementById('item').addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+    var value = document.getElementById('item').value;
+    addItemTodo(value);
+    document.getElementById('item').value = '';
+    }
+});
+
 function removeItem(){
     var item = this.parentNode.parentNode;
     var parent = item.parentNode;
